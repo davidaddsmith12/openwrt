@@ -1,8 +1,9 @@
 / {
 	#address-cells = <1>;
 	#size-cells = <1>;
-	compatible = "ralink,mt7620n-soc";
-
+	compatible = "fir300m", "ralink,mt7620n-soc";
+   	model = "FIR300M";
+	
 	cpus {
 		#address-cells = <1>;
 		#size-cells = <0>;
@@ -190,7 +191,7 @@
 			#address-cells = <1>;
 			#size-cells = <0>;
 
-			status = "disabled";
+			status = "okay";
 
 			pinctrl-names = "default";
 			pinctrl-0 = <&spi_pins>;
@@ -332,7 +333,7 @@
 			compatible = "mediatek,mt7620a-gsw-port", "mediatek,eth-port";
 			reg = <4>;
 
-			status = "disabled";
+			status = "okay";
 		};
 	};
 
@@ -360,7 +361,7 @@
 		phys = <&usbphy>;
 		phy-names = "usb";
 
-		status = "disabled";
+		status = "okay";
 
 		ehci_port1: port@1 {
 			reg = <1>;
@@ -380,7 +381,7 @@
 		interrupt-parent = <&intc>;
 		interrupts = <18>;
 
-		status = "disabled";
+		status = "okay";
 
 		ohci_port1: port@1 {
 			reg = <1>;
